@@ -10,14 +10,12 @@ public:
 
 DummyStrategy()
 {
-   setSlPips(0);
-   setTpPips(0);
    setUpdateSignalsAt(EV_CLOSE_CANDLE);
 }
 
 void UpdateSignals() override
 {
-   if(CanPlaceTrades())
+   if(CanPlaceTrades() == false)
       return;
 
    if(false)
